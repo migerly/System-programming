@@ -1,0 +1,53 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 51  of event 'cpu-clock'
+# Event count (approx.): 515151510
+#
+# Overhead  Command      Shared Object      Symbol             
+# ........  ...........  .................  ...................
+#
+    98.04%  benchmarkO3  benchmarkO3        [.] transform
+            |
+            ---transform
+               main
+               __libc_start_call_main
+               call_init (inlined)
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+     1.96%  benchmarkO3  [kernel.kallsyms]  [k] handle_softirqs
+            |
+            ---handle_softirqs
+               __irq_exit_rcu
+               irq_exit_rcu
+               sysvec_apic_timer_interrupt
+               asm_sysvec_apic_timer_interrupt
+               _raw_spin_unlock_irqrestore
+               folios_put_refs
+               free_pages_and_swap_cache
+               __tlb_batch_free_encoded_pages
+               tlb_finish_mmu
+               unmap_region
+               vms_complete_munmap_vmas
+               do_vmi_align_munmap
+               do_vmi_munmap
+               __vm_munmap
+               __x64_sys_munmap
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __munmap
+               main
+               __libc_start_call_main
+               call_init (inlined)
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
